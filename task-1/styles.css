@@ -1,0 +1,345 @@
+:root{
+  --pinwhite: #d1b9b9;
+  --golden:rgb(235, 157, 93);
+  --borcolor:rgb(196, 230, 97);
+  --bucolor:#edc161;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+section{
+  padding: 2rem 9%;
+}
+.heading{
+  text-align: center;
+  font-size: 4rem;
+  color: #333;
+  padding: 1rem;
+  margin: 2rem 0;
+  background: black;
+}
+.heading span{
+  color: var(--golden);
+
+}
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background: var(--bucolor);
+  color: black;
+  padding: .9rem 3.5rem;
+  font-size: 1.7rem;
+}
+.btn:hover{
+  background: var(--pinwhite);
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 .5rem 1rem rgba(103, 12, 230, 0.1);
+}
+header .logo{
+  font-size: 3rem;
+  color: var(--golden);
+  font-weight: bolder;
+}
+header .logo span{
+  color: var(--pinwhite);
+}
+header .navbar a{
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: var(--golden);
+}
+header .navbar a:hover{
+  color: var(--pinwhite);
+}
+header .icons a{
+  font-size: 3rem;
+  color: var(--golden);
+  margin-left: 1.5rem;
+}
+header .icons a:hover{
+  color: var(--pinwhite);
+}
+header #toggler{
+  display: none;
+}
+header .fa-bars{
+  font-size: 3rem;
+  color:  var(--golden);
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+  border: .1rem solid var(--bcolor);
+  display: none;
+}
+.home{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background:url(https://wallup.net/wp-content/uploads/2019/10/300991-headphones-monochrome.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home .content{
+  max-width: 50rem;
+}
+.home .content h3{
+  font-size: 6rem;
+  color: var(--golden);
+}
+.home .content span{
+  font-size: 3.5rem;
+  color: rgb(216, 217, 166);
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+.home .content p{
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+.about{
+  background: black;
+}
+.about .row{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+.about .row .img-container{
+  flex: 1 1 40rem;
+  position: relative;
+}
+.about .row .img-container img{
+  background: black;
+  width: 100%;
+  border: 1.5rem solid var(--borcolor);
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(103, 12, 230, 0.1);
+  height: 100%;
+  object-fit: cover;
+}
+.about .row .img-container h3{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #fff;
+  text-align: center;
+  mix-blend-mode: screen;
+}
+.about .row .content{
+  flex: 1 1 40rem;
+
+}
+.about .row .content h3{
+  font-size: 3rem;
+  color: var(--golden);
+}
+.about h1{
+  color: var(--pinwhite);
+}
+.about .row .content p{
+  font-size: 1.5rem;
+  color: var(--pinwhite);
+  padding: 5rem 0;
+  padding-top: 1rem;
+  line-height: 1.5;
+}
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background: #d6a743;
+  color: black;
+  padding:.9rem 3.5rem;
+  font-size: 1.7rem;
+}
+.products{
+  background: black;
+}
+.products .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.products .box-container .box{
+  flex: 1 1 30rem;
+  box-shadow: 0 .5rem 1.5rem rgba(106, 13, 236, 0.1);
+  border-radius: .5rem;
+  border: .1rem solid pink;
+  position: relative;
+}
+.products .box-container .box .discount{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: .7rem 1rem;
+  font-size: 2rem;
+  color: var(--pinwhite);
+  background: rgb(26, 24, 24);
+  border-radius: 50%;
+  z-index: 1;
+}
+.products .box-container .box .image{
+  position: relative;
+  text-align: center;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+.products .box-container .box .image img{
+  height: 30rem;
+}
+.products .box-container .box:hover .image img{
+  transform: scale(1.1);
+}
+.products .box-container .box .image .icons{
+  position: absolute;
+  bottom:-7rem;left: 0;right: 0;
+  display: flex;
+}
+.products .box-container .box:hover .image .icons{ 
+  bottom:0;  
+}
+.products .box-container .box .image .icons a{
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  width: 50%;
+  background: var(--pinwhite);
+  color: #333;
+}
+.products .box-container .box .image .icons .cart-btn{
+  border-left: .1rem solid;
+  border-right: .1rem solid;
+  width: 100%;
+}
+.products .box-container .box .image .icons a:hover{
+  background: var(--bucolor);
+}
+.products .box-container .box .content{
+  padding: 2rem;
+  text-align: center;
+}
+.products .box-container .box .content h3{
+  font-size: 2.5rem;
+  color:var(--pinwhite);
+}
+.products .box-container .box .content .price{
+  font-size: 2.5rem;
+  color: var(--golden) ;
+  font-weight: bolder;
+  padding-top: 1rem;
+}
+.products .box-container .box .content span{
+  font-size: 2.5rem;
+  color: rgb(150, 150, 188);
+  text-decoration: line-through;
+  font-weight: lighter;
+  
+}
+.products .heading{
+  color: var(--pinwhite);
+}
+@media (max-width:991px){
+  html{
+    font-size: 55%;
+  }
+  header{
+    padding: 2rem;
+  }
+  section{
+    padding: 2rem;
+  }
+  .home{
+    background-position: center;
+  }
+}
+@media (max-width:768px) {
+  header .fa-bars{
+    display: block;
+  }
+  header .navbar{
+    position: absolute;
+    top: 100%;left: 0;right: 0;
+    background: black;
+    border-top: .1rem solid var(--bcolor) ;
+    clip-path: polygon(0 0, 100% 0, 0 0);
+  }
+header #toggler:checked ~ .navbar{
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0  100%);
+  }
+header .navbar a{
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+    border: .1rem solid var(--bcolor);
+    border-radius: 10px;
+    font-weight: bold;
+    display: block;  
+  }
+  header .navbar a:hover{
+    color: black;
+  }
+  .home .content h3{
+    font-size: 5rem;
+  }
+  .home .content span{
+    font-size: 2.5rem;
+  }
+  .home{
+    background-position: center;
+  }
+  .about .row .content h3{
+    text-align: center;
+  }
+  .about .row .content p{
+    text-align: center;
+  }
+  .aboutbtn{
+    
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width:450px) {
+  html{
+    font-size: 50%;
+  }
+  header .navbar a:hover{
+    color: black;
+  }
+  .heading{
+    font-size: 3rem;
+  }
+}
