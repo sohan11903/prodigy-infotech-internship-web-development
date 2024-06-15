@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(227, 157, 157);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+    color: black;
+    margin-top: 30px;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-div{
+    margin-top: 30px;
+}
+.tic-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tic-div div{
+    color: black;
+    background: rgb(250, 213, 140);
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5rem;
+    cursor: pointer;
+}
+.tic-div div:hover{
+    background: rgb(229, 229, 11);
+}
+.reset-btn{
+    width: 70px;
+    margin: auto;
+    text-align: center;
+    background: black;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+.reset-btn:hover{
+    background: rgb(42, 45, 48);
+}
+h3{
+    font-size: 30px;
+    width: 570px;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+.draw{
+   
+    width: 155px;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+p{
+    font-size: 20px;
+    font-weight: bolder;
+    width: 210px;
+    margin: auto;
+    margin-top: 20px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tic-tac-toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Tic-Tac-Toe</h2>
+      <div class="main-div">
+        <div class="tic-div">
+          <div id="0" class="box" onclick="handleClick(this)"></div>
+          <div id="1" class="box" onclick="handleClick(this)"></div>
+          <div id="2" class="box" onclick="handleClick(this)"></div>
+        </div>
+        <div class="tic-div">
+          <div id="3" class="box" onclick="handleClick(this)"></div>
+          <div id="4" class="box" onclick="handleClick(this)"></div>
+          <div id="5" class="box" onclick="handleClick(this)"></div>
+        </div>
+        <div class="tic-div">
+          <div id="6" class="box" onclick="handleClick(this)"></div>
+          <div id="7" class="box" onclick="handleClick(this)"></div>
+          <div id="8" class="box" onclick="handleClick(this)"></div>
+        </div>
+      </div>
+      <P>Now, the Turn is <span class="turn">X</span></P>
+      <h3 class="winner"></h3>
+      <h3 class="draw"></h3>
+      <div class="reset-btn">
+        Reset
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
