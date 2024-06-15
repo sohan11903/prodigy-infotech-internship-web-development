@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bd29482239.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-square-xmark" onclick="closemnu()"></i>
+
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header_text">
+                <p>Web / App & GUI <br> Devloper</p>
+                <h1>hello, I'm <br><span id="element"></span></h1>
+                <div class="social-icons">
+
+                    <a href="https://github.com/sohan11903"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+
+                <p class="git">Github</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Sohann Prajapati'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemnu() {
+            sidemenu.style.right = "-200px"
+        }
+    </script>
+    <!---------------------------------------------------------------------------about--------------------------------------------------->
+    <div id="about">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="about-col-1">
+                    <img src="img/sohan.png">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Name :- Sohan prajapati<br>
+                        Age :- 21 years old<br>
+                        Address :- surat, Gujarat<br>
+                        E-mail :- sohan11903@gmail.com</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                            <li><span>GUI</span><br>Designing Web/App with help of Python Tkinter</li>
+                        </ul>
+                        <br>
+                        <table>
+                            <tr>
+                                <td><img class="row1" src="img/th (3).jpeg"></td>
+                                <td><img class="row1" src="img/th (4).jpeg"></td>
+                                <td><img class="row1" src="img/th (5).jpeg"></td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; padding-left:15px">C</td>
+                                <td style="color: #fff; padding-left:2px">HTML</td>
+                                <td style="color: #fff; padding-left:4px">CSS</td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td><img class="row1" src="img/th (1).jpeg"></td>
+                                <td><img class="row1" src="img/th (2).jpeg"></td>
+                                <td><img class="row1" src="img/th (7).jpeg"></td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; padding-left:6px">PHP</td>
+                                <td style="color: #fff; padding-left:1px">DART</td>
+                                <td style="color: #fff; padding-left:0px">MySQL</td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td><img class="row1" src="img/th.jpeg"></td>
+                                <td><img class="row1" src="img/th (6).jpeg"></td>
+                                <td><img class="row1" src="img/th (8).jpeg"></td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; padding-left:1px">Python</td>
+                                <td style="color: #fff; padding-left:1px">Tkinter</td>
+                                <td style="color: #fff; padding-left:1px">Flutter</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>Nothing Now</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>College</span><br>Sardar Vallabbhai patel institute of Technology<br>(SVIT)-Vasad
+                            </li>
+                            <li><span>University</span><br>Gujarat Technological University<br>
+                                (GTU)</li>
+                            <li><span>school</span><br>Shree Swaminarayan Gurukul Vidyalaya<br>
+                                (SSGV)- Surat</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tablink of tabcontents) {
+                tablink.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+
+    <!---------------------------------------------------------------------services----------------------------------------------------------------->
+
+    <!----------------------------------------------------------------my work-------------------------------------------------------------------->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work">
+                <div class="part1 ">
+                    <img src="img/web.jpeg">
+                </div>
+                <div class="part2">
+                    <p class="myp">All projects about web design</p><br><br>
+                    <a class="but" href="web.html" style="--clr:#5aed41"><span>Show All</span><i></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <div class="part1 ">
+                    <img src="img/th.jpg">
+                </div>
+                <div class="part2">
+                    <p class="myp">All projects about App design</p><br><br>
+                    <a class="but" href="app.html" style="--clr:#5aed41"><span>Show All</span><i></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <div class="part1 ">
+                    <img src="img/gui.jpeg">
+                </div>
+                <div class="part2">
+                    <p class="myp">All projects about GUI design</p><br><br>
+                    <a class="but" href="gui.html" style="--clr:#5aed41"><span>Show All</span><i></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------------------contact---------------------------------------------------------------------  -->
+   
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> sohan11903@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 9664691917</p>
+                    <div class="social-icons">
+                        <a href="http://instagram.com/100han_bugs"><i class="fa-brands fa-instagram"></i></a>
+                        <a
+                            href="https://www.linkedin.com/in/sohan-prajapati-499069250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    </div>
+                    <a href="img/sohan cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright © 2023. Designed by SOHAN</p>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwSkPD2MYQRcjIqQPEGq4PsV7XvGrGrw2PxreX5wUCD36JDiNCsqrCfABlQGfMdkqjW/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () { msg.innerHTML = "" }, 4000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
